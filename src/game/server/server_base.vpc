@@ -70,6 +70,12 @@ $Project
 {
 	$Folder "Entities"
 	{
+		$Folder "Buttons"
+		{
+			$File "entities\buttons\CWeightButton.cpp"
+			$File "entities\buttons\CWeightButton.h"
+		}
+
 		$Folder "Effects"
 		{
 			$File "entities\effects\CDecal.cpp"
@@ -674,7 +680,6 @@ $Project
 		$File	"$SRCDIR\game\shared\weapon_parse.h"
 		$File	"$SRCDIR\game\shared\weapon_proficiency.cpp"
 		$File	"$SRCDIR\game\shared\weapon_proficiency.h"
-		$File	"weight_button.cpp"
 		$File	"$SRCDIR\game\shared\mp_shareddefs.cpp"
 		$File	"$SRCDIR\game\shared\SharedFunctorUtils.h"
 		$File	"$SRCDIR\game\server\vote_controller.h"

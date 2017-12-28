@@ -1,32 +1,11 @@
-
 //========= Copyright Valve Corporation, All rights reserved. ============//
-//
-// Purpose: 'Button' which activates after a specified amount of weight is touching it.
-//
-//=============================================================================//
 
 #include "cbase.h"
 
-class CWeightButton : public CBaseEntity
-{
-public:
+#include "entities/buttons/CWeightButton.h"
 
-	DECLARE_DATADESC();
-	DECLARE_CLASS( CWeightButton, CBaseEntity ); 
-
-	void Spawn( void );
-	bool CreateVPhysics( void );
-
-	COutputEvent m_OnPressed;				// After threshold weight has been reached
-	COutputEvent m_OnReleased;				// After weight has been removed to go below weight threshold
-
-	float m_fStressToActivate;				// Amount of weight required to activate
-	bool m_bHasBeenPressed;					// Once the button has been pressed, fire one 
-											// output until the weight is reduced below the threshold
-
-	void TriggerThink ( void );
-
-};
+// memdbgon must be the last include file in a .cpp file!!!
+#include "tier0/memdbgon.h"
 
 LINK_ENTITY_TO_CLASS( func_weight_button, CWeightButton );
 
@@ -37,7 +16,7 @@ BEGIN_DATADESC( CWeightButton )
 
 	DEFINE_OUTPUT( m_OnPressed, "OnPressed" ),
 	DEFINE_OUTPUT( m_OnReleased, "OnReleased" ),
-	
+
 	DEFINE_THINKFUNC( TriggerThink ),
 
 END_DATADESC()
@@ -50,7 +29,7 @@ void CWeightButton::Spawn()
 	// Convert movedir from angles to a vector
 	SetMoveType( MOVETYPE_VPHYSICS );
 	SetSolid( SOLID_VPHYSICS );
- 	SetModel( STRING( GetModelName() ) );
+	SetModel( STRING( GetModelName() ) );
 	CreateVPhysics();
 	SetThink( &CWeightButton::TriggerThink );
 	SetNextThink( gpGlobals->curtime + TICK_INTERVAL );
@@ -82,7 +61,7 @@ void CWeightButton::TriggerThink( void )
 		return;
 	}
 
- 	float fStress = CalculateObjectStress( pMyPhysics, this, &vpobj_StressOut );
+	float fStress = CalculateObjectStress( pMyPhysics, this, &vpobj_StressOut );
 
 //	fStress = vpobj_StressOut.receivedStress;
 
