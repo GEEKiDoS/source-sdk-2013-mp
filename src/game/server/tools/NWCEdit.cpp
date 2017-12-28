@@ -1,36 +1,20 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
-//
-// Purpose:		Namespace for functions having to do with WC Edit mode
-//
-// $Workfile:     $
-// $Date:         $
-//
-//-----------------------------------------------------------------------------
-// $Log: $
-//
-// $NoKeywords: $
-//=============================================================================//
 
 #include "cbase.h"
-#include "mathlib/mathlib.h"
-#include "player.h"
-#include "wcedit.h"
-#include "ai_network.h"
-#include "ai_initutils.h"
-#include "ai_hull.h"
-#include "ai_link.h"
-#include "ai_node.h"
+
 #include "ai_dynamiclink.h"
+#include "ai_initutils.h"
+#include "ai_link.h"
+#include "ai_network.h"
 #include "ai_networkmanager.h"
-#include "ndebugoverlay.h"
+#include "ai_node.h"
 #include "editor_sendcommand.h"
-#include "movevars_shared.h"
 #include "model_types.h"
-// UNDONE: Reduce some dependency here!
+#include "movevars_shared.h"
 #include "physics_prop_ragdoll.h"
-#include "items.h"
-#include "utlsymbol.h"
 #include "physobj.h"
+
+#include "tools/NWCEdit.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

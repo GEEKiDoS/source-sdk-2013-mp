@@ -13,12 +13,12 @@
 #include "ai_initutils.h"
 #include "lights.h"
 #include "mapentities.h"
-#include "wcedit.h"
 #include "stringregistry.h"
 #include "datacache/imdlcache.h"
 #include "toolframework/iserverenginetools.h"
 
 #include "entities/CWorld.h"
+#include "tools/NWCEdit.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

@@ -11,13 +11,14 @@
 #include "mathlib/mathlib.h"
 #include "player.h"
 #include "ndebugoverlay.h"
-#include "wcedit.h"
 
 #ifdef POSIX
 #include "ai_basenpc.h"
 #include "ai_network.h"
 #include "ai_networkmanager.h"
 #endif
+
+#include "tools/NWCEdit.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

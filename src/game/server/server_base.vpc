@@ -84,6 +84,12 @@ $Project
 		$File "entities\CWorld.h"
 	}
 
+	$Folder "Tools"
+	{
+		$File "tools\NWCEdit.cpp"
+		$File "tools\NWCEdit.h"
+	}
+
 	$Folder "Replay"
 	{
 		$File	"gamedll_replay.cpp"
@@ -664,8 +670,6 @@ $Project
 		$File	"waterbullet.cpp"
 		$File	"waterbullet.h"
 		$File	"WaterLODControl.cpp"
-		$File	"wcedit.cpp"
-		$File	"wcedit.h"
 		$File	"$SRCDIR\game\shared\weapon_parse.cpp"
 		$File	"$SRCDIR\game\shared\weapon_parse.h"
 		$File	"$SRCDIR\game\shared\weapon_proficiency.cpp"

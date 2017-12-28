@@ -1,19 +1,11 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
-//
-// Purpose:		Namespace for functions having to do with WC Edit mode
-//
-// $Workfile:     $
-// $Date:         $
-//
-//-----------------------------------------------------------------------------
-// $Log: $
-//
-// $NoKeywords: $
-//=============================================================================//
 
-#ifndef WCEDIT_H
-#define WCEDIT_H
+#ifndef GAME_SERVER_TOOLS_NWCEDIT_H
+#define GAME_SERVER_TOOLS_NWCEDIT_H
+
+#ifdef WIN32
 #pragma once
+#endif
 
 class CBaseEntity;
 
@@ -33,4 +25,4 @@ namespace NWCEdit
 	void	UpdateEntityPosition( CBaseEntity *pEntity );
 };
 
-#endif // WCEDIT_H
+#endif // GAME_SERVER_TOOLS_NWCEDIT_H
