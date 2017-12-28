@@ -30,7 +30,6 @@
 #include "physics_impact_damage.h"
 #include "saverestore_utlvector.h"
 #include "eventqueue.h"
-#include "world.h"
 #include "globalstate.h"
 #include "items.h"
 #include "movevars_shared.h"
@@ -53,6 +52,8 @@
 	#include "prop_portal_shared.h"
 	#include "portal_shareddefs.h"
 #endif
+
+#include "entities/CWorld.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

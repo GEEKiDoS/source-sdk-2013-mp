@@ -1,16 +1,11 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
-//
-// Purpose: The worldspawn entity. This spawns first when each level begins.
-//
-// $NoKeywords: $
-//=============================================================================//
 
-#ifndef WORLD_H
-#define WORLD_H
-#ifdef _WIN32
+#ifndef GAME_SERVER_ENTITIES_CWORLD_H
+#define GAME_SERVER_ENTITIES_CWORLD_H
+
+#ifdef WIN32
 #pragma once
 #endif
-
 
 class CWorld : public CBaseEntity
 {
@@ -23,7 +18,7 @@ public:
 	DECLARE_SERVERCLASS();
 
 	virtual int RequiredEdictIndex( void ) { return 0; }   // the world always needs to be in slot 0
-	
+
 	static void RegisterSharedActivities( void );
 	static void RegisterSharedEvents( void );
 	virtual void Spawn( void );
@@ -72,9 +67,7 @@ private:
 	bool m_bDisplayTitle;
 };
 
-
 CWorld* GetWorldEntity();
 extern const char *GetDefaultLightstyleString( int styleIndex );
 
-
-#endif // WORLD_H
+#endif // GAME_SERVER_ENTITIES_CWORLD_H

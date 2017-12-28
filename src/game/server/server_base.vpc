@@ -68,6 +68,22 @@ $Configuration
 
 $Project
 {
+	$Folder "Entities"
+	{
+		$Folder "Effects"
+		{
+			$File "entities\effects\CDecal.cpp"
+			$File "entities\effects\CDecal.h"
+			$File "entities\effects\CProjectedDecal.cpp"
+			$File "entities\effects\CProjectedDecal.h"
+			$File "entities\effects\CWaterLODControl.cpp"
+			$File "entities\effects\CWaterLODControl.h"
+		}
+
+		$File "entities\CWorld.cpp"
+		$File "entities\CWorld.h"
+	}
+
 	$Folder "Replay"
 	{
 		$File	"gamedll_replay.cpp"
@@ -655,8 +671,6 @@ $Project
 		$File	"$SRCDIR\game\shared\weapon_proficiency.cpp"
 		$File	"$SRCDIR\game\shared\weapon_proficiency.h"
 		$File	"weight_button.cpp"
-		$File	"world.cpp"
-		$File	"world.h"
 		$File	"$SRCDIR\game\shared\mp_shareddefs.cpp"
 		$File	"$SRCDIR\game\shared\SharedFunctorUtils.h"
 		$File	"$SRCDIR\game\server\vote_controller.h"

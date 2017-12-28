@@ -21,10 +21,12 @@
 #include "npc_attackchopper.h"
 #include "weapon_rpg.h"
 #include "vphysics/constraints.h"
-#include "world.h"
 #include "rumble_shared.h"
 // NVNT for airboat weapon fire
 #include "haptics/haptic_utils.h"
+
+#include "entities/CWorld.h"
+
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
 

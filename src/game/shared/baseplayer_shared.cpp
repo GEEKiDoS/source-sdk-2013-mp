@@ -28,7 +28,6 @@
 
 	#include "iservervehicle.h"
 	#include "trains.h"
-	#include "world.h"
 	#include "doors.h"
 	#include "ai_basenpc.h"
 	#include "env_zoom.h"

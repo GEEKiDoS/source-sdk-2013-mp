@@ -16,8 +16,9 @@
 #include "wcedit.h"
 #include "stringregistry.h"
 #include "datacache/imdlcache.h"
-#include "world.h"
 #include "toolframework/iserverenginetools.h"
+
+#include "entities/CWorld.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

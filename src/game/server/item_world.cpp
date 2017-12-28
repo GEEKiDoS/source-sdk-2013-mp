@@ -12,11 +12,12 @@
 #include "engine/IEngineSound.h"
 #include "iservervehicle.h"
 #include "physics_saverestore.h"
-#include "world.h"
 
 #ifdef HL2MP
 #include "hl2mp_gamerules.h"
 #endif
+
+#include "entities/CWorld.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

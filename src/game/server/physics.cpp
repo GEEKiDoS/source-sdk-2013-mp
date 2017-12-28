@@ -20,7 +20,6 @@
 #include "hierarchy.h"
 #include "IEffects.h"
 #include "engine/IEngineSound.h"
-#include "world.h"
 #include "decals.h"
 #include "physics_fx.h"
 #include "vphysics_sound.h"
@@ -52,6 +51,8 @@
 #include "PortalSimulation.h"
 void PortalPhysFrame( float deltaTime ); //small wrapper for PhysFrame that simulates all 3 environments at once
 #endif
+
+#include "entities/CWorld.h"
 
 void PrecachePhysicsSounds( void );
 

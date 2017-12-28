@@ -10,7 +10,6 @@
 #include "entityoutput.h"
 #include "eventqueue.h"
 #include "player.h"
-#include "world.h"
 #include "ndebugoverlay.h"
 
 // memdbgon must be the last include file in a .cpp file!!!

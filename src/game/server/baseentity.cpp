@@ -38,7 +38,6 @@
 #include "te_effect_dispatch.h"
 #include "AI_Criteria.h"
 #include "AI_ResponseSystem.h"
-#include "world.h"
 #include "globals.h"
 #include "saverestoretypes.h"
 #include "SkyCamera.h"
@@ -66,6 +65,8 @@
 #if defined( TF_DLL )
 #include "tf_gamerules.h"
 #endif
+
+#include "entities/CWorld.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

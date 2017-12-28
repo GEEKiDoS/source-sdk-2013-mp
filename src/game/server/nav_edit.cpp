@@ -17,7 +17,6 @@
 #include "Color.h"
 #include "tier0/vprof.h"
 #include "collisionutils.h"
-#include "world.h"
 #include "functorutils.h"
 #include "team.h"
 #ifdef TERROR
@@ -28,6 +27,8 @@
 #include "dota_npc_base.h"
 #include "dota_player.h"
 #endif
+
+#include "entities/CWorld.h"
 
 // NOTE: This has to be the last file included!
 #include "tier0/memdbgon.h"

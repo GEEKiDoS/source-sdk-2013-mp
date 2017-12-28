@@ -8,7 +8,8 @@
 #include "cbase.h"
 #include "test_stressentities.h"
 #include "vstdlib/random.h"
-#include "world.h"
+
+#include "entities/CWorld.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

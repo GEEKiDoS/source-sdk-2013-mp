@@ -15,7 +15,8 @@
 #include "ar2_explosion.h"
 #include "vstdlib/random.h"
 #include "engine/IEngineSound.h"
-#include "world.h"
+
+#include "entities/CWorld.h"
 
 #ifdef PORTAL
 	#include "portal_util_shared.h"

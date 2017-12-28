@@ -27,11 +27,12 @@
 #include "vstdlib/random.h"
 #include "engine/IEngineSound.h"
 #include "movevars_shared.h"
-#include "world.h"
 #include "npc_bullseye.h"
 #include "physics_npc_solver.h"
 #include "hl2_gamerules.h"
 #include "decals.h"
+
+#include "entities/CWorld.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

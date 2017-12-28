@@ -14,7 +14,6 @@
 #include "ai_basenpc.h"
 #include "ai_link.h"
 #include "ai_navigator.h"
-#include "world.h"
 #include "ai_moveprobe.h"
 
 // memdbgon must be the last include file in a .cpp file!!!

@@ -30,7 +30,6 @@
 #include "props.h"
 #include "te_effect_dispatch.h"
 #include "ai_squadslot.h"
-#include "world.h"
 #include "smoke_trail.h"
 #include "func_break.h"
 #include "physics_impact_damage.h"
@@ -38,6 +37,8 @@
 #include "physics_prop_ragdoll.h"
 #include "soundent.h"
 #include "ammodef.h"
+
+#include "entities/CWorld.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

@@ -48,7 +48,6 @@
 #include "globals.h"
 #include "usermessages.h"
 #include "gamevars_shared.h"
-#include "world.h"
 #include "physobj.h"
 #include "KeyValues.h"
 #include "coordsize.h"
@@ -81,6 +80,8 @@
 #include "combine_mine.h"
 #include "weapon_physcannon.h"
 #endif
+
+#include "entities/CWorld.h"
 
 ConVar autoaim_max_dist( "autoaim_max_dist", "2160" ); // 2160 = 180 feet
 ConVar autoaim_max_deflect( "autoaim_max_deflect", "0.99" );
