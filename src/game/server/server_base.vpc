@@ -110,7 +110,7 @@ $Project
 		$File	"$SRCDIR\game\shared\replay_gamestats_shared.cpp"	[$BUILD_REPLAY]
 		$File	"$SRCDIR\game\shared\replay_gamestats_shared.h"	[$BUILD_REPLAY]
 	}
-	
+
 	$Folder	"Source Files"
 	{
 		$File	"$SRCDIR\game\shared\achievement_saverestore.cpp"
@@ -679,7 +679,6 @@ $Project
 		$File	"$SRCDIR\game\shared\voice_common.h"
 		$File	"$SRCDIR\game\shared\voice_gamemgr.cpp"
 		$File	"$SRCDIR\game\shared\voice_gamemgr.h"
-		$File	"WaterLODControl.cpp"
 		$File	"$SRCDIR\game\shared\weapon_parse.cpp"
 		$File	"$SRCDIR\game\shared\weapon_parse.h"
 		$File	"$SRCDIR\game\shared\weapon_proficiency.cpp"

@@ -1,45 +1,11 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
-//
-// Purpose: Shadow control entity.
-//
-// $NoKeywords: $
-//=============================================================================//
 
 #include "cbase.h"
 
+#include "entities/effects/CWaterLODControl.h"
+
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
-
-//------------------------------------------------------------------------------
-// FIXME: This really should inherit from something	more lightweight
-//------------------------------------------------------------------------------
-
-
-//------------------------------------------------------------------------------
-// Purpose : Water LOD control entity
-//------------------------------------------------------------------------------
-class CWaterLODControl : public CBaseEntity
-{
-public:
-	DECLARE_CLASS( CWaterLODControl, CBaseEntity );
-
-	CWaterLODControl();
-
-	void Spawn( void );
-	bool KeyValue( const char *szKeyName, const char *szValue );
-	int  UpdateTransmitState();
-	void SetCheapWaterStartDistance( inputdata_t &inputdata );
-	void SetCheapWaterEndDistance( inputdata_t &inputdata );
-
-	virtual int	ObjectCaps( void ) { return BaseClass::ObjectCaps() & ~FCAP_ACROSS_TRANSITION; }
-
-	DECLARE_SERVERCLASS();
-	DECLARE_DATADESC();
-
-private:
-	CNetworkVar( float, m_flCheapWaterStartDistance );
-	CNetworkVar( float, m_flCheapWaterEndDistance );
-};
 
 LINK_ENTITY_TO_CLASS(water_lod_control, CWaterLODControl);
 
