@@ -86,6 +86,12 @@ $Project
 			$File "entities\effects\CWaterLODControl.h"
 		}
 
+		$Folder "Weapons"
+		{
+			$File "entities\weapons\CWaterBullet.cpp"
+			$File "entities\weapons\CWaterBullet.h"
+		}
+
 		$File "entities\CWorld.cpp"
 		$File "entities\CWorld.h"
 	}
@@ -673,8 +679,6 @@ $Project
 		$File	"$SRCDIR\game\shared\voice_common.h"
 		$File	"$SRCDIR\game\shared\voice_gamemgr.cpp"
 		$File	"$SRCDIR\game\shared\voice_gamemgr.h"
-		$File	"waterbullet.cpp"
-		$File	"waterbullet.h"
 		$File	"WaterLODControl.cpp"
 		$File	"$SRCDIR\game\shared\weapon_parse.cpp"
 		$File	"$SRCDIR\game\shared\weapon_parse.h"
