@@ -27,7 +27,6 @@
 	#include "soundent.h"
 	#include "iservervehicle.h"
 	#include "player_pickup.h"
-	#include "waterbullet.h"
 	#include "func_break.h"
 
 #ifdef HL2MP
@@ -35,7 +34,6 @@
 #endif
 
 	#include "gamestats.h"
-
 #endif
 
 #ifdef HL2_EPISODIC
@@ -54,6 +52,10 @@ ConVar hl2_episodic( "hl2_episodic", "0", FCVAR_REPLICATED );
 #endif // TF_DLL
 
 #include "rumble_shared.h"
+
+#ifndef CLIENT_DLL
+#include "entities/weapons/CWaterBullet.h"
+#endif
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

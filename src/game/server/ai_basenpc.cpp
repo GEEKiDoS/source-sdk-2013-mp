@@ -75,7 +75,6 @@
 #include "hl2_player.h"
 #include "weapon_physcannon.h"
 #endif
-#include "waterbullet.h"
 #include "in_buttons.h"
 #include "eventlist.h"
 #include "globalstate.h"
@@ -106,6 +105,8 @@ extern ConVar sk_healthkit;
 
 #include "utlbuffer.h"
 #include "gamestats.h"
+
+#include "entities/weapons/CWaterBullet.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
