@@ -1,5 +1,9 @@
 # Files to ignore when considering what GIT should commit.
 
+# Intermediate files
+Debug
+Release
+
 # Valve Project Creator (VPC)
 *.sentinel
 *.vpc_crc
@@ -25,6 +29,7 @@ ipch
 *.vcxproj
 *.sln
 *.filters
+*.pdb
 
 # OSX/Linux build products
 *.mak
