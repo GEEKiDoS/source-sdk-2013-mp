@@ -88,6 +88,8 @@ $Project
 
 		$Folder "Logic"
 		{
+			$File "entities\logic\CLogicAuto.cpp"
+			$File "entities\logic\CLogicAuto.h"
 			$File "entities\logic\CLogicRelay.cpp"
 			$File "entities\logic\CLogicRelay.h"
 		}
@@ -479,7 +481,6 @@ $Project
 		$File	"locksounds.h"
 		$File	"logic_measure_movement.cpp"
 		$File	"logic_navigation.cpp"
-		$File	"logicauto.cpp"
 		$File	"logicentities.cpp"
 		$File	"mapentities.cpp"
 		$File	"$SRCDIR\game\shared\mapentities_shared.cpp"

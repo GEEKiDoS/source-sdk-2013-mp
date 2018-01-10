@@ -7,62 +7,29 @@
 //=============================================================================//
 
 #include "cbase.h"
-#include "entityinput.h"
-#include "entityoutput.h"
-#include "eventqueue.h"
-#include "mathlib/mathlib.h"
+
 #include "globalstate.h"
+
+#include "entities/logic/CLogicAuto.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
 
-const int SF_AUTO_FIREONCE		= 0x01;
-const int SF_AUTO_FIREONRELOAD	= 0x02;
-
-
-class CLogicAuto : public CBaseEntity
-{
-public:
-	DECLARE_CLASS( CLogicAuto, CBaseEntity );
-
-	void Activate(void);
-	void Think(void);
-
-	int ObjectCaps(void) { return BaseClass::ObjectCaps() & ~FCAP_ACROSS_TRANSITION; }
-
-	DECLARE_DATADESC();
-
-private:
-
-	// fired no matter why the map loaded
-	COutputEvent m_OnMapSpawn;
-
-	// fired for specified types of map loads
-	COutputEvent m_OnNewGame;
-	COutputEvent m_OnLoadGame;
-	COutputEvent m_OnMapTransition;
-	COutputEvent m_OnBackgroundMap;
-	COutputEvent m_OnMultiNewMap;
-	COutputEvent m_OnMultiNewRound;
-
-	string_t m_globalstate;
-};
-
 LINK_ENTITY_TO_CLASS(logic_auto, CLogicAuto);
 
 
-BEGIN_DATADESC( CLogicAuto )
+BEGIN_DATADESC(CLogicAuto)
 
-	DEFINE_KEYFIELD(m_globalstate, FIELD_STRING, "globalstate"),
+DEFINE_KEYFIELD(m_globalstate, FIELD_STRING, "globalstate"),
 
-	// Outputs
-	DEFINE_OUTPUT(m_OnMapSpawn, "OnMapSpawn"),
-	DEFINE_OUTPUT(m_OnNewGame, "OnNewGame"),
-	DEFINE_OUTPUT(m_OnLoadGame, "OnLoadGame"),
-	DEFINE_OUTPUT(m_OnMapTransition, "OnMapTransition"),
-	DEFINE_OUTPUT(m_OnBackgroundMap, "OnBackgroundMap"),
-	DEFINE_OUTPUT(m_OnMultiNewMap, "OnMultiNewMap" ),
-	DEFINE_OUTPUT(m_OnMultiNewRound, "OnMultiNewRound" ),
+// Outputs
+DEFINE_OUTPUT(m_OnMapSpawn, "OnMapSpawn"),
+DEFINE_OUTPUT(m_OnNewGame, "OnNewGame"),
+DEFINE_OUTPUT(m_OnLoadGame, "OnLoadGame"),
+DEFINE_OUTPUT(m_OnMapTransition, "OnMapTransition"),
+DEFINE_OUTPUT(m_OnBackgroundMap, "OnBackgroundMap"),
+DEFINE_OUTPUT(m_OnMultiNewMap, "OnMultiNewMap"),
+DEFINE_OUTPUT(m_OnMultiNewRound, "OnMultiNewRound"),
 
 END_DATADESC()
 
@@ -73,7 +40,7 @@ END_DATADESC()
 void CLogicAuto::Activate(void)
 {
 	BaseClass::Activate();
-	SetNextThink( gpGlobals->curtime + 0.2 );
+	SetNextThink(gpGlobals->curtime + 0.2);
 }
 
 
@@ -105,10 +72,10 @@ void CLogicAuto::Think(void)
 
 		m_OnMapSpawn.FireOutput(NULL, this);
 
-		if ( g_pGameRules->IsMultiplayer() )
+		if (g_pGameRules->IsMultiplayer())
 		{
 			// In multiplayer, fire the new map / round events.
-			if ( g_pGameRules->InRoundRestart() )
+			if (g_pGameRules->InRoundRestart())
 			{
 				m_OnMultiNewRound.FireOutput(NULL, this);
 			}
@@ -124,4 +91,3 @@ void CLogicAuto::Think(void)
 		}
 	}
 }
-
