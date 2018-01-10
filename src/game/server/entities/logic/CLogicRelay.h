@@ -1,17 +1,11 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
-//
-// Purpose: 
-//
-// $NoKeywords: $
-//
-//=============================================================================//
-#ifndef LOGICRELAY_H
-#define LOGICRELAY_H
 
-#include "cbase.h"
-#include "entityinput.h"
-#include "entityoutput.h"
-#include "eventqueue.h"
+#ifndef GAME_SERVER_ENTITIES_LOGIC_CLOGICRELAY_H
+#define GAME_SERVER_ENTITIES_LOGIC_CLOGICRELAY_H
+
+#ifdef WIN32
+#pragma once
+#endif
 
 class CLogicRelay : public CLogicalEntity
 {
@@ -45,4 +39,4 @@ private:
 	bool m_bWaitForRefire;			// Set to disallow a refire while we are waiting for our outputs to finish firing.
 };
 
-#endif //LOGICRELAY_H
+#endif // GAME_SERVER_ENTITIES_LOGIC_CLOGICRELAY_H

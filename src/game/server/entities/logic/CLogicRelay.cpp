@@ -10,11 +10,10 @@
 //=============================================================================
 
 #include "cbase.h"
-#include "entityinput.h"
-#include "entityoutput.h"
+
 #include "eventqueue.h"
-#include "soundent.h"
-#include "logicrelay.h"
+
+#include "entities/logic/CLogicRelay.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

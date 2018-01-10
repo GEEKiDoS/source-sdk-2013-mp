@@ -86,6 +86,12 @@ $Project
 			$File "entities\effects\CWaterLODControl.h"
 		}
 
+		$Folder "Logic"
+		{
+			$File "entities\logic\CLogicRelay.cpp"
+			$File "entities\logic\CLogicRelay.h"
+		}
+
 		$Folder "Weapons"
 		{
 			$File "entities\weapons\CWaterBullet.cpp"
@@ -475,7 +481,6 @@ $Project
 		$File	"logic_navigation.cpp"
 		$File	"logicauto.cpp"
 		$File	"logicentities.cpp"
-		$File	"logicrelay.cpp"
 		$File	"mapentities.cpp"
 		$File	"$SRCDIR\game\shared\mapentities_shared.cpp"
 		$File	"maprules.cpp"
@@ -917,7 +922,6 @@ $Project
 		$File	"$SRCDIR\public\tier1\KeyValues.h"
 		$File	"$SRCDIR\common\language.h"
 		$File	"$SRCDIR\public\tier0\l2cache.h"
-		$File	"logicrelay.h"
 		$File	"$SRCDIR\public\map_utils.h"
 		$File	"mapentities.h"
 		$File	"$SRCDIR\game\shared\mapentities_shared.h"
