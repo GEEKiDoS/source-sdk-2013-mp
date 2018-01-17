@@ -90,6 +90,8 @@ $Project
 		{
 			$File "entities\logic\CLogicAuto.cpp"
 			$File "entities\logic\CLogicAuto.h"
+			$File "entities\logic\CLogicCompareInteger.cpp"
+			$File "entities\logic\CLogicCompareInteger.h"
 			$File "entities\logic\CLogicRelay.cpp"
 			$File "entities\logic\CLogicRelay.h"
 		}
