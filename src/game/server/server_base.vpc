@@ -92,6 +92,8 @@ $Project
 			$File "entities\logic\CEnvGlobal.h"
 			$File "entities\logic\CLogicAuto.cpp"
 			$File "entities\logic\CLogicAuto.h"
+			$File "entities\logic\CLogicAutosave.cpp"
+			$File "entities\logic\CLogicAutosave.h"
 			$File "entities\logic\CLogicBranch.cpp"
 			$File "entities\logic\CLogicBranch.h"
 			$File "entities\logic\CLogicCase.cpp"
