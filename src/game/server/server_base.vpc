@@ -92,6 +92,8 @@ $Project
 			$File "entities\logic\CLogicAuto.h"
 			$File "entities\logic\CLogicCompareInteger.cpp"
 			$File "entities\logic\CLogicCompareInteger.h"
+			$File "entities\logic\CLogicLineToEntity.cpp"
+			$File "entities\logic\CLogicLineToEntity.h"
 			$File "entities\logic\CLogicRelay.cpp"
 			$File "entities\logic\CLogicRelay.h"
 			$File "entities\logic\CTimerEntity.cpp"
