@@ -1,70 +1,14 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
-//
-// Purpose: Implements many of the entities that control logic flow within a map.
-//
-//=============================================================================
 
 #include "cbase.h"
-#include "entityinput.h"
-#include "entityoutput.h"
-#include "eventqueue.h"
-#include "mathlib/mathlib.h"
-#include "globalstate.h"
-#include "ndebugoverlay.h"
-#include "saverestore_utlvector.h"
-#include "vstdlib/random.h"
-#include "gameinterface.h"
 
-#include "entities/logic/CLogicAutosave.h"
+#include "saverestore_utlvector.h"
+
 #include "entities/logic/CLogicBranch.h"
+#include "entities/logic/CLogicBranchList.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
-
-
-extern CServerGameDLL g_ServerGameDLL;
-
-
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-#define MAX_LOGIC_BRANCH_NAMES 16
-
-class CLogicBranchList : public CLogicalEntity
-{
-	DECLARE_CLASS( CLogicBranchList, CLogicalEntity );
-
-	virtual void Spawn();
-	virtual void Activate();
-	virtual int DrawDebugTextOverlays( void );
-
-private:
-
-	enum LogicBranchListenerLastState_t
-	{
-		LOGIC_BRANCH_LISTENER_NOT_INIT = 0,
-		LOGIC_BRANCH_LISTENER_ALL_TRUE,
-		LOGIC_BRANCH_LISTENER_ALL_FALSE,
-		LOGIC_BRANCH_LISTENER_MIXED,
-	};
-
-	void DoTest( CBaseEntity *pActivator );
-
-	string_t m_nLogicBranchNames[MAX_LOGIC_BRANCH_NAMES];
-	CUtlVector<EHANDLE> m_LogicBranchList;
-	LogicBranchListenerLastState_t m_eLastState;
-
-	// Inputs
-	void Input_OnLogicBranchRemoved( inputdata_t &inputdata );
-	void Input_OnLogicBranchChanged( inputdata_t &inputdata );
-	void InputTest( inputdata_t &inputdata );
-
-	// Outputs
-	COutputEvent m_OnAllTrue;			// Fired when all the registered logic_branches become true.
-	COutputEvent m_OnAllFalse;			// Fired when all the registered logic_branches become false.
-	COutputEvent m_OnMixed;				// Fired when one of the registered logic branches changes, but not all are true or false.
-
-	DECLARE_DATADESC();
-};
 
 LINK_ENTITY_TO_CLASS(logic_branch_listener, CLogicBranchList);
 
