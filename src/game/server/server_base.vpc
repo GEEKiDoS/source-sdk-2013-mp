@@ -94,6 +94,8 @@ $Project
 			$File "entities\logic\CLogicAuto.h"
 			$File "entities\logic\CLogicCase.cpp"
 			$File "entities\logic\CLogicCase.h"
+			$File "entities\logic\CLogicCompare.cpp"
+			$File "entities\logic\CLogicCompare.h"
 			$File "entities\logic\CLogicCompareInteger.cpp"
 			$File "entities\logic\CLogicCompareInteger.h"
 			$File "entities\logic\CLogicLineToEntity.cpp"
