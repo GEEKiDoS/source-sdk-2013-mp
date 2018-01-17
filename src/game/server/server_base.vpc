@@ -96,6 +96,8 @@ $Project
 			$File "entities\logic\CLogicLineToEntity.h"
 			$File "entities\logic\CLogicRelay.cpp"
 			$File "entities\logic\CLogicRelay.h"
+			$File "entities\logic\CMathRemap.cpp"
+			$File "entities\logic\CMathRemap.h"
 			$File "entities\logic\CTimerEntity.cpp"
 			$File "entities\logic\CTimerEntity.h"
 		}
