@@ -94,6 +94,8 @@ $Project
 			$File "entities\logic\CLogicCompareInteger.h"
 			$File "entities\logic\CLogicRelay.cpp"
 			$File "entities\logic\CLogicRelay.h"
+			$File "entities\logic\CTimerEntity.cpp"
+			$File "entities\logic\CTimerEntity.h"
 		}
 
 		$Folder "Weapons"
