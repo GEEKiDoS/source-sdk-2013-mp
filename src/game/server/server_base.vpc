@@ -90,6 +90,8 @@ $Project
 		{
 			$File "entities\logic\CEnvGlobal.cpp"
 			$File "entities\logic\CEnvGlobal.h"
+			$File "entities\logic\CLogicActiveAutosave.cpp"
+			$File "entities\logic\CLogicActiveAutosave.h"
 			$File "entities\logic\CLogicAuto.cpp"
 			$File "entities\logic\CLogicAuto.h"
 			$File "entities\logic\CLogicAutosave.cpp"
