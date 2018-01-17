@@ -80,6 +80,8 @@ $Project
 		{
 			$File "entities\effects\CDecal.cpp"
 			$File "entities\effects\CDecal.h"
+			$File "entities\effects\CFuncSmokeVolume.cpp"
+			$File "entities\effects\CFuncSmokeVolume.h"
 			$File "entities\effects\CProjectedDecal.cpp"
 			$File "entities\effects\CProjectedDecal.h"
 			$File "entities\effects\CWaterLODControl.cpp"
@@ -449,7 +451,6 @@ $Project
 		$File	"func_movelinear.h"
 		$File	"func_occluder.cpp"
 		$File	"func_reflective_glass.cpp"
-		$File	"func_smokevolume.cpp"
 		$File	"game.cpp"
 		$File	"game.h"
 		$File	"game_ui.cpp"

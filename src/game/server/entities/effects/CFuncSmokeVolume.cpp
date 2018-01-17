@@ -1,43 +1,13 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
-//
-// Purpose: 
-//
-// $NoKeywords: $
-//=============================================================================//
 
 #include "cbase.h"
+
 #include "baseparticleentity.h"
-#include "sendproxy.h"
+
+#include "entities/effects/CFuncSmokeVolume.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
-
-class CFuncSmokeVolume : public CBaseParticleEntity
-{
-public:
-	DECLARE_CLASS( CFuncSmokeVolume, CBaseParticleEntity );
-	DECLARE_SERVERCLASS();
-	DECLARE_DATADESC();
-
-	CFuncSmokeVolume();
-	void Spawn();
-	void Activate( void );
-
-	// Set the times it fades out at.
-	void SetDensity( float density );
-
-private:
-	CNetworkVar( color32, m_Color1 );
-	CNetworkVar( color32, m_Color2 );
-	CNetworkString( m_MaterialName, 255 );
-	string_t m_String_tMaterialName;
-	CNetworkVar( float, m_ParticleDrawWidth );
-	CNetworkVar( float, m_ParticleSpacingDistance );
-	CNetworkVar( float, m_DensityRampSpeed );
-	CNetworkVar( float, m_RotationSpeed );
-	CNetworkVar( float, m_MovementSpeed );
-	CNetworkVar( float, m_Density );
-};
 
 BEGIN_DATADESC( CFuncSmokeVolume )
 
@@ -102,4 +72,3 @@ void CFuncSmokeVolume::Activate( void )
 	BaseClass::Activate();
 	Q_strncpy( m_MaterialName.GetForModify(), STRING( m_String_tMaterialName ), 255 );
 }
-
