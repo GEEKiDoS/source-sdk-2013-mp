@@ -102,6 +102,8 @@ $Project
 			$File "entities\logic\CMathColorBlend.h"
 			$File "entities\logic\CMathRemap.cpp"
 			$File "entities\logic\CMathRemap.h"
+			$File "entities\logic\CMultiSource.cpp"
+			$File "entities\logic\CMultiSource.h"
 			$File "entities\logic\CTimerEntity.cpp"
 			$File "entities\logic\CTimerEntity.h"
 		}
