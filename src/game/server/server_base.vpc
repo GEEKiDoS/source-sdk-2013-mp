@@ -132,6 +132,8 @@ $Project
 			$File "entities\triggers\CPhysicsWind.h"
 			$File "entities\triggers\CTriggerTeleport.cpp"
 			$File "entities\triggers\CTriggerTeleport.h"
+			$File "entities\triggers\CTriggerTeleportRelative.cpp"
+			$File "entities\triggers\CTriggerTeleportRelative.h"
 			$File "entities\triggers\CTriggerWind.cpp"
 			$File "entities\triggers\CTriggerWind.h"
 		}

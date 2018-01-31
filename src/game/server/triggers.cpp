@@ -2335,45 +2335,9 @@ void CTriggerPush::Touch( CBaseEntity *pOther )
 
 
 
-//-----------------------------------------------------------------------------
-// Teleport Relative trigger
-//-----------------------------------------------------------------------------
-class CTriggerTeleportRelative : public CBaseTrigger
-{
-public:
-	DECLARE_CLASS(CTriggerTeleportRelative, CBaseTrigger);
-
-	virtual void Spawn( void ) OVERRIDE;
-	virtual void Touch( CBaseEntity *pOther ) OVERRIDE;
-
-	Vector m_TeleportOffset;
-
-	DECLARE_DATADESC();
-};
-
-LINK_ENTITY_TO_CLASS( trigger_teleport_relative, CTriggerTeleportRelative );
-BEGIN_DATADESC( CTriggerTeleportRelative )
-	DEFINE_KEYFIELD( m_TeleportOffset, FIELD_VECTOR, "teleportoffset" )
-END_DATADESC()
 
 
-void CTriggerTeleportRelative::Spawn( void )
-{
-	InitTrigger();
-}
 
-void CTriggerTeleportRelative::Touch( CBaseEntity *pOther )
-{
-	if ( !PassesTriggerFilters(pOther) )
-	{
-		return;
-	}
-
-	const Vector finalPos = m_TeleportOffset + WorldSpaceCenter();
-	const Vector *momentum = &vec3_origin;
-
-	pOther->Teleport( &finalPos, NULL, momentum );
-}
 
 //-----------------------------------------------------------------------------
 // Purpose: Saves the game when the player touches the trigger. Can be enabled or disabled
