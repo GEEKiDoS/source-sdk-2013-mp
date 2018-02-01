@@ -1548,42 +1548,6 @@ void CTriggerSave::Touch( CBaseEntity *pOther )
 	}
 }
 
-
-class CTriggerGravity : public CBaseTrigger
-{
-public:
-	DECLARE_CLASS( CTriggerGravity, CBaseTrigger );
-	DECLARE_DATADESC();
-
-	void Spawn( void );
-	void GravityTouch( CBaseEntity *pOther );
-};
-LINK_ENTITY_TO_CLASS( trigger_gravity, CTriggerGravity );
-
-BEGIN_DATADESC( CTriggerGravity )
-
-	// Function Pointers
-	DEFINE_FUNCTION(GravityTouch),
-
-END_DATADESC()
-
-void CTriggerGravity::Spawn( void )
-{
-	BaseClass::Spawn();
-	InitTrigger();
-	SetTouch( &CTriggerGravity::GravityTouch );
-}
-
-void CTriggerGravity::GravityTouch( CBaseEntity *pOther )
-{
-	// Only save on clients
-	if ( !pOther->IsPlayer() )
-		return;
-
-	pOther->SetGravity( GetGravity() );
-}
-
-
 // this is a really bad idea.
 class CAI_ChangeTarget : public CBaseEntity
 {
