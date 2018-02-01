@@ -1,7 +1,7 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
 
-#ifndef GAME_SERVER_ENTITIES_WEAPONS_CTRIGGERWIND_H
-#define GAME_SERVER_ENTITIES_WEAPONS_CTRIGGERWIND_H
+#ifndef GAME_SERVER_ENTITIES_TRIGGERS_CTRIGGERWIND_H
+#define GAME_SERVER_ENTITIES_TRIGGERS_CTRIGGERWIND_H
 
 #ifdef WIN32
 #pragma once
