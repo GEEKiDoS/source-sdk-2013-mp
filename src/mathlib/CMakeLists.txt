@@ -48,7 +48,7 @@ set( MATHLIB_SOURCES
 	"${CMAKE_SOURCE_DIR}/public/mathlib/vector4d.h"
 	"${CMAKE_SOURCE_DIR}/public/mathlib/vmatrix.h"
 	"${CMAKE_SOURCE_DIR}/public/mathlib/vplane.h"
-)
+	)
 
 # Mac don't need these files
 if( NOT APPLE )
@@ -57,7 +57,7 @@ if( NOT APPLE )
 		3dnow.cpp
 		3dnow.h
 		"${CMAKE_SOURCE_DIR}/public/mathlib/amd3dx.h"
-		)
+	)
 endif()
 
 # Add a static library
@@ -67,18 +67,18 @@ add_library( mathlib STATIC ${MATHLIB_SOURCES} )
 target_compile_definitions( mathlib PRIVATE
 	${SHARED_LIB_COMPILE_DEFS}
 	MATHLIB_LIB
-)
+	)
 
 # Linker definitions
 set_target_properties( mathlib PROPERTIES
 	COMPILE_FLAGS "${SHARED_LIB_LINKER_DEFS}"
-)
+	)
 
 # Include directories
 target_include_directories( mathlib PRIVATE
 	${SHARED_INCLUDE_DIRS}
 	"${CMAKE_SOURCE_DIR}/public/mathlib"
-)
+	)
 
 # No prefixes
 set_target_properties( mathlib PROPERTIES PREFIX "" )

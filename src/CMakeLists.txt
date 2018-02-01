@@ -23,7 +23,7 @@ set( SHARED_COMPILE_DEFS
 	${SHARED_COMPILE_DEFS}
 	RAD_TELEMETRY_DISABLED
 	VPROF_LEVEL=1
-)
+	)
 
 # Pre-processor definitions based on compile configuration for all projects.
 if( CMAKE_BUILD_TYPE STREQUAL "Debug" )
@@ -157,7 +157,7 @@ endif()
 set( SHARED_LIB_COMPILE_DEFS
 	${SHARED_COMPILE_DEFS}
 	FRAME_POINTER_OMISSION_DISABLED
-)
+	)
 
 # Pre-processor definitions based on platform common to all static libraries projects.
 if( MSVC )
