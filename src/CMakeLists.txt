@@ -22,6 +22,7 @@ endif()
 set( SHARED_COMPILE_DEFS
 	${SHARED_COMPILE_DEFS}
 	RAD_TELEMETRY_DISABLED
+	VPROF_LEVEL=1
 )
 
 # Pre-processor definitions based on compile configuration for all projects.
@@ -65,17 +66,33 @@ if( MSVC )
 		WMV_VIDEO
 	)
 else()
+	set( SHARED_COMPILE_DEFS
+		${SHARED_COMPILE_DEFS}
+		GNUC
+		POSIX
+		_POSIX
+		NO_HOOK_MALLOC
+		NO_MALLOC_OVERRIDE
+	)
+
 	if( APPLE )
 		# Mac uses QuickTime.
 		set( SHARED_COMPILE_DEFS
 			${SHARED_COMPILE_DEFS}
+			OSX
+			_OSX
 			QUICKTIME_VIDEO
 			FORCE_QUICKTIME
+			_DARWIN_UNLIMITED_SELECT
+			FD_SETSIZE=10240
+			OVERRIDE_V_DEFINES
 		)
 	else()
 		# Linux uses Bink.
 		set( SHARED_COMPILE_DEFS
 			${SHARED_COMPILE_DEFS}
+			LINUX
+			_LINUX
 			BINK_VIDEO
 		)
 	endif()
@@ -169,7 +186,7 @@ if( MSVC )
 	set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} /W4 /WX /arch:SSE" ) # VPC added "/Wp64" here but VS2013 bork about it.
 	set( CMAKE_STATIC_LINKER_FLAGS "${CMAKE_STATIC_LINKER_FLAGS} /ignore:4221" ) # This needs to be here for an unknown reason.
 else()
-	set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -Wall -Werror" )
+	set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -std=gnu++1z -fpermissive -m32 -march=pentium4 -msse2 -mfpmath=sse -mtune=core2 -Wall -Wno-ignored-attributes -Wno-narrowing -Wno-unknown-pragmas -Wno-unused-local-typedefs -Wno-reorder -Wno-unused-value" )
 endif()
 
 # Add the projects
