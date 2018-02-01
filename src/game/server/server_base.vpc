@@ -132,6 +132,8 @@ $Project
 			$File "entities\triggers\CChangeLevel.h"
 			$File "entities\triggers\CPhysicsWind.cpp"
 			$File "entities\triggers\CPhysicsWind.h"
+			$File "entities\triggers\CTriggerCDAudio.cpp"
+			$File "entities\triggers\CTriggerCDAudio.h"
 			$File "entities\triggers\CTriggerTeleport.cpp"
 			$File "entities\triggers\CTriggerTeleport.h"
 			$File "entities\triggers\CTriggerTeleportRelative.cpp"
