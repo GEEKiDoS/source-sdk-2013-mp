@@ -128,6 +128,8 @@ $Project
 
 		$Folder "Triggers"
 		{
+			$File "entities\triggers\CChangeLevel.cpp"
+			$File "entities\triggers\CChangeLevel.h"
 			$File "entities\triggers\CPhysicsWind.cpp"
 			$File "entities\triggers\CPhysicsWind.h"
 			$File "entities\triggers\CTriggerTeleport.cpp"
