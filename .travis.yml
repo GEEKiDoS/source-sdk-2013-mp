@@ -40,9 +40,9 @@ before_script:
 script:
   - |
     if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
-      CC="gcc-7" CXX="g++-7" cmake ..
+      CC="gcc-7" CXX="g++-7" cmake -DCMAKE_BUILD_TYPE=Release ..
     else
-      cmake ..
+      cmake -DCMAKE_BUILD_TYPE=Release ..
     fi
   - make
 
