@@ -24,7 +24,7 @@ matrix:
 # On Linux, get the required 32 bits package. On OSX, just update Homebrew.
 before_install:
   - |
-    if [[ "${TRAVIS_OS_NAME} == "linux" ]]; then
+    if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
       sudo dpkg --add-architecture i386
       sudo apt-get -qq update
       sudo apt-get install -y linux-libc-dev:i386
