@@ -1,0 +1,46 @@
+# Use C language as base.
+language: c
+
+# We need at least Ubuntu 14.04 Trusty and sudo access.
+sudo: required
+dist: trusty
+
+# We need the PPA Toolchain Test for GCC/G++ 7
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - linux-libc-dev
+    - gcc-7-multilib
+    - g++-7-multilib
+
+# Standard Linux and OSX builds.
+matrix:
+  include:
+    - os: linux
+    - os: osx
+
+# On Linux, get the required 32 bits package. On OSX, just update Homebrew.
+before_install:
+  - |
+    if [[ "${TRAVIS_OS_NAME} == "linux" ]]; then
+      sudo dpkg --add-architecture i386
+      sudo apt-get -qq update
+      sudo apt-get install -y linux-libc-dev:i386
+    else
+      brew update
+    fi
+
+# Make the build dir and get inside it.
+before_script:
+  - mkdir build_linux && cd build_linux
+
+# Just build.
+script:
+  - CC="gcc-7" CXX="g++-7" cmake ..
+  - make
+
+# No e-mail notifications.
+notifications:
+  email: false
