@@ -203,7 +203,7 @@ else()
 	if( APPLE )
 		set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -Wno-unused-private-field -Wno-unused-const-variable -Wno-unused-variable" )
 	else()
-		set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -mfpmath=sse" )
+		set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -Wno-strict-aliasing -mfpmath=sse" )
 	endif()
 endif()
 
