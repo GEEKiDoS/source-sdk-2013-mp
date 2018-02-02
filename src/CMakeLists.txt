@@ -209,3 +209,4 @@ endif()
 
 # Add the projects
 add_subdirectory( mathlib )
+add_subdirectory( tier1 )
