@@ -86,6 +86,7 @@ else()
 			_DARWIN_UNLIMITED_SELECT
 			FD_SETSIZE=10240
 			OVERRIDE_V_DEFINES
+			PNG_NO_PEDANTIC_WARNINGS
 		)
 	else()
 		# Linux uses Bink.
@@ -127,6 +128,10 @@ if( MSVC )
 			set( SHARED_LINKER_DEFS "${SHARED_LINKER_DEFS} /Z7" )
 		endif()
 	endif()
+else()
+	if( NOT CMAKE_BUILD_TYPE STREQUAL "Debug" )
+		set( SHARED_LINKER_DEFS "${SHARED_LINKER_DEFS} -ftree-vectorize -funswitch-loop" )
+	endif()
 endif()
 
 # ----------------------------------------
@@ -147,6 +152,13 @@ if( UNIX )
 		${SHARED_INCLUDE_DIRS}
 		"${CMAKE_SOURCE_DIR}/thirdparty/SDL2"
 	)
+
+	if( APPLE )
+		set( SHARED_INCLUDE_DIRS
+			${SHARED_INCLUDE_DIRS}
+			"/usr/include/malloc"
+		)
+	endif()
 endif()
 
 # --------------------------------------------------
@@ -186,7 +198,13 @@ if( MSVC )
 	set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} /W4 /WX /arch:SSE" ) # VPC added "/Wp64" here but VS2013 bork about it.
 	set( CMAKE_STATIC_LINKER_FLAGS "${CMAKE_STATIC_LINKER_FLAGS} /ignore:4221" ) # This needs to be here for an unknown reason.
 else()
-	set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -std=gnu++1z -fpermissive -m32 -march=pentium4 -msse2 -mfpmath=sse -mtune=core2 -Wall -Wno-ignored-attributes -Wno-narrowing -Wno-unknown-pragmas -Wno-unused-local-typedefs -Wno-reorder -Wno-unused-value" )
+	set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -std=gnu++1z -fpermissive -m32 -march=pentium4 -msse2 -mtune=core2 -Wall -Wno-ignored-attributes -Wno-narrowing -Wno-unknown-pragmas -Wno-unused-local-typedefs -Wno-reorder -Wno-unused-value" )
+
+	if( APPLE )
+		set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -Wno-unused-private-field -Wno-unused-const-variable -Wno-unused-variable" )
+	else()
+		set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -mfpmath=sse" )
+	endif()
 endif()
 
 # Add the projects
