@@ -38,7 +38,12 @@ before_script:
 
 # Just build.
 script:
-  - CC="gcc-7" CXX="g++-7" cmake ..
+  - |
+    if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
+      CC="gcc-7" CXX="g++-7" cmake ..
+    else
+      cmake ..
+    fi
   - make
 
 # No e-mail notifications.
