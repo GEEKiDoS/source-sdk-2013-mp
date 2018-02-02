@@ -34,7 +34,7 @@ before_install:
 
 # Make the build dir and get inside it.
 before_script:
-  - mkdir build_linux && cd build_linux
+  - mkdir src/build_linux && cd src/build_linux
 
 # Just build.
 script:
