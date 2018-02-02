@@ -42,7 +42,7 @@ script:
     if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
       CC="gcc-7" CXX="g++-7" cmake -DCMAKE_BUILD_TYPE=Release ..
     else
-      cmake -DCMAKE_BUILD_TYPE=Release ..
+      cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES=i386 ..
     fi
   - make
 
