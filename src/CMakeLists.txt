@@ -201,9 +201,9 @@ else()
 	set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -std=gnu++1z -fpermissive -m32 -march=pentium4 -msse2 -mtune=core2 -Wall -Wno-ignored-attributes -Wno-narrowing -Wno-unknown-pragmas -Wno-unused-local-typedefs -Wno-register -Wno-reorder -Wno-sign-compare -Wno-unused-value -Wno-unused-variable" )
 
 	if( APPLE )
-		set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -Wno-inconsistent-missing-override -Wno-unused-private-field -Wno-unused-const-variable -Wno-unused-function -Wno-unused-result" )
+		set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -Wno-inconsistent-missing-override -Wno-unused-private-field -Wno-unused-const-variable" )
 	else()
-		set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -Wno-nonnull-compare -Wno-strict-aliasing -mfpmath=sse" )
+		set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -Wno-misleading-identation -Wno-nonnull-compare -Wno-overloaded-virtual -Wno-strict-aliasing -Wno-undefined-bool-conversion -mfpmath=sse" )
 	endif()
 endif()
 
