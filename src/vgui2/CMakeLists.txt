@@ -6,7 +6,7 @@ set( VGUI_CONTROLS_SOURCES
 	"${CMAKE_SOURCE_DIR}/vgui2/src/vgui_key_translation.cpp"
 	"${CMAKE_SOURCE_DIR}/vgui2/src/vgui_key_translation.h"
 	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/AnalogBar.cpp"
-	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/AnimationImagePanel.cpp"
+	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/AnimatingImagePanel.cpp"
 	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/AnimationController.cpp"
 	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/BitmapImagePanel.cpp"
 	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/BuildFactoryHelper.cpp"
