@@ -198,7 +198,8 @@ if( MSVC )
 	set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} /W4 /WX /arch:SSE" ) # VPC added "/Wp64" here but VS2013 bork about it.
 	set( CMAKE_STATIC_LINKER_FLAGS "${CMAKE_STATIC_LINKER_FLAGS} /ignore:4221" ) # This needs to be here for an unknown reason.
 else()
-	set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -std=gnu++1z -fpermissive -m32 -march=pentium4 -msse2 -mtune=core2 -Wall -Wno-ignored-attributes -Wno-narrowing -Wno-unknown-pragmas -Wno-unused-local-typedefs -Wno-register -Wno-reorder -Wno-sign-compare -Wno-unused-value -Wno-unused-variable" )
+	set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpermissive -std=gnu++1z -Wno-register -Wno-reorder" )
+	set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -m32 -march=pentium4 -msse2 -mtune=core2 -Wall -Wno-ignored-attributes -Wno-narrowing -Wno-unknown-pragmas -Wno-unused-local-typedefs -Wno-sign-compare -Wno-unused-function -Wno-unused-value -Wno-unused-result -Wno-unused-variable" )
 
 	if( APPLE )
 		set( SHARED_LIB_LINKER_DEFS "${SHARED_LIB_LINKER_DEFS} -Wno-inconsistent-missing-override -Wno-unused-private-field -Wno-unused-const-variable" )
