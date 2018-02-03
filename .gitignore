@@ -1,5 +1,8 @@
 # Files to ignore when considering what GIT should commit.
 
+# CMake builds
+src/build*
+
 # Intermediate files
 Debug
 Release
