@@ -20,7 +20,7 @@ set( VGUI_CONTROLS_SOURCES
 	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/consoledialog.cpp"
 	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/ControllerMap.cpp"
 	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/controls.cpp"
-	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/CvarToggleCheckButton.cpp"
+	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/cvartogglecheckbutton.cpp"
 	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/DirectorySelectDialog.cpp"
 	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/Divider.cpp"
 	"${CMAKE_SOURCE_DIR}/vgui2/vgui_controls/EditablePanel.cpp"
