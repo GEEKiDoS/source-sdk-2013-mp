@@ -106,7 +106,7 @@ set( VGUI_CONTROLS_SOURCES
 	"${CMAKE_SOURCE_DIR}/public/vgui_controls/consoledialog.h"
 	"${CMAKE_SOURCE_DIR}/public/vgui_controls/ControllerMap.h"
 	"${CMAKE_SOURCE_DIR}/public/vgui_controls/Controls.h"
-	"${CMAKE_SOURCE_DIR}/public/vgui_controls/CvarToggleCheckButton.h"
+	"${CMAKE_SOURCE_DIR}/public/vgui_controls/cvartogglecheckbutton.h"
 	"${CMAKE_SOURCE_DIR}/public/vgui_controls/DialogManager.h"
 	"${CMAKE_SOURCE_DIR}/public/vgui_controls/DirectorySelectDialog.h"
 	"${CMAKE_SOURCE_DIR}/public/vgui_controls/Divider.h"
